@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | ÉLÉGANCE Luxury Perfumes</title>
+<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+.contact-page{background:#fbf6ee;color:#1b1112;min-height:100vh}
+.contact-hero{padding:105px 6% 65px;text-align:center;background:#fbf6ee}
+.contact-kicker{letter-spacing:5px;font-size:12px;font-weight:600;color:#6b1724}
+.contact-hero h1{font-family:'Playfair Display',serif;color:#74101b;font-size:clamp(44px,6vw,76px);font-weight:500;margin:18px 0 12px}
+.contact-hero p{max-width:720px;margin:0 auto;font-size:16px;line-height:1.8;color:#4b3b38}
+.contact-section{max-width:1180px;margin:0 auto;padding:20px 6% 90px}
+.contact-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:28px;align-items:stretch}
+.contact-info,.contact-form-card{background:#fff;border:1px solid #eadbd0;box-shadow:0 15px 45px rgba(55,20,20,.07)}
+.contact-info{padding:42px 36px;background:#54151f;color:#fff}
+.contact-info h2,.contact-form-card h2{font-family:'Playfair Display',serif;font-size:34px;font-weight:500;margin:0 0 14px}
+.contact-info h2{color:#f7ecdc}
+.contact-info>p{line-height:1.8;color:#f4e8df;margin:0 0 28px}
+.contact-detail{display:flex;gap:15px;align-items:flex-start;padding:17px 0;border-top:1px solid rgba(247,236,220,.18)}
+.contact-detail i{width:20px;color:#d5b36c;margin-top:4px}
+.contact-detail strong{display:block;color:#f7ecdc;font-size:13px;letter-spacing:1px;text-transform:uppercase;margin-bottom:4px}
+.contact-detail span{color:#f4e8df;font-size:14px;line-height:1.6}
+.contact-form-card{padding:42px 36px}
+.contact-form-card h2{color:#74101b}
+.contact-form-card>p{color:#675752;line-height:1.7;margin:0 0 25px}
+.contact-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.contact-field{display:flex;flex-direction:column;gap:7px}
+.contact-field.full{grid-column:1/-1}
+.contact-field label{font-size:11px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:#5d4945}
+.contact-field input,.contact-field textarea{width:100%;box-sizing:border-box;border:1px solid #decfc4;background:#fbf6ee;color:#2a1a1b;padding:13px 14px;font:inherit;outline:none;transition:border-color .2s,box-shadow .2s}
+.contact-field textarea{min-height:145px;resize:vertical}
+.contact-field input:focus,.contact-field textarea:focus{border-color:#74101b;box-shadow:0 0 0 3px rgba(116,16,27,.08)}
+.contact-submit{grid-column:1/-1;border:0;background:#54151f;color:#f7ecdc;padding:15px 28px;font-size:12px;font-weight:600;letter-spacing:1.2px;cursor:pointer;transition:transform .2s,background .2s}
+.contact-submit:hover{background:#74101b;transform:translateY(-1px)}
+.contact-success{display:none;margin-top:16px;padding:12px 14px;background:#f2eadf;color:#54151f;font-size:13px;line-height:1.5}
+.contact-page .site-footer{margin-top:0}
+@media(max-width:800px){.contact-hero{padding:80px 5% 50px}.contact-section{padding:10px 5% 60px}.contact-grid{grid-template-columns:1fr}.contact-info,.contact-form-card{padding:32px 24px}.contact-form{grid-template-columns:1fr}.contact-field.full,.contact-submit{grid-column:auto}}
+</style>
+</head>
+<body class="contact-page">
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="brand-logo">
+            <div class="logo-symbol">E</div>
+            <div class="brand-text">
+                <span>ÉLÉGANCE</span>
+                <small>LUXURY PERFUMES</small>
+            </div>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link active">Contact Us</a>
+
+            <div class="dropdown">
+                <a href="collection.html" class="dropdown-btn nav-link">Collection <i class="fa-solid fa-chevron-down"></i></a>
+
+                <div class="dropdown-menu">
+                    <a href="collections.html?collection=women" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Women" alt="Women's fragrances">
+                        <span>Women</span>
+                    </a>
+                    <a href="collections.html?collection=men" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Men" alt="Men's fragrances">
+                        <span>Men</span>
+                    </a>
+                    <a href="collections.html?collection=unisex" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Unisex" alt="Unisex fragrances">
+                        <span>Unisex</span>
+                    </a>
+                    <a href="collections.html?collection=oud-attar" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Oud" alt="Oud and attar">
+                        <span>Oud &amp; Attar</span>
+                    </a>
+                    <a href="collections.html?collection=gift-sets" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Gifts" alt="Gift sets">
+                        <span>Gift Sets</span>
+                    </a>
+                    <a href="collections.html?collection=new-arrivals" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=New" alt="New arrivals">
+                        <span>New Arrivals</span>
+                    </a>
+                    <a href="collections.html?collection=best-sellers" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Best" alt="Best sellers">
+                        <span>Best Sellers</span>
+                    </a>
+                    <a href="collections.html?collection=limited-edition" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Limited" alt="Limited edition">
+                        <span>Limited Edition</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn search-toggle" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <a href="cart.html" class="icon-btn" aria-label="Shopping Bag">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <a href="index.html#account" class="icon-btn" aria-label="Account">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <a href="index.html#shop" class="nav-cta">Shop Now</a>
+
+            <button class="mobile-menu-btn" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <div class="search-inner">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search your favorite perfume..." id="searchInput">
+            <button class="close-search" aria-label="Close Search">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="mobile-nav-overlay"></div>
+
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span>Menu</span>
+            <button class="mobile-nav-close" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+
+        <div class="mobile-collection">
+            <button class="mobile-collection-btn">
+                Collection <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="mobile-dropdown">
+                <a href="collections.html?collection=women"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=W" alt="">Women</a>
+                <a href="collections.html?collection=men"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=M" alt="">Men</a>
+                <a href="collections.html?collection=unisex"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=U" alt="">Unisex</a>
+                <a href="collections.html?collection=oud-attar"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=O" alt="">Oud &amp; Attar</a>
+                <a href="collections.html?collection=gift-sets"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=G" alt="">Gift Sets</a>
+                <a href="collections.html?collection=new-arrivals"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=N" alt="">New Arrivals</a>
+                <a href="collections.html?collection=best-sellers"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=B" alt="">Best Sellers</a>
+                <a href="collections.html?collection=limited-edition"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=L" alt="">Limited Edition</a>
+            </div>
+        </div>
+
+        <a href="index.html#account">Account</a>
+        <a href="cart.html">Shopping Bag</a>
+
+        <a href="index.html#shop" class="mobile-cta">Shop Now</a>
+    </div>
+</header>
+<main>
+<section class="contact-hero">
+  <div class="contact-kicker">THE ÉLÉGANCE EXPERIENCE</div>
+  <h1>Contact Us</h1>
+  <p>Have a question about a fragrance, an order, or our collection? We would love to hear from you.</p>
+</section>
+<section class="contact-section">
+  <div class="contact-grid">
+    <div class="contact-info">
+      <h2>Let's Connect</h2>
+      <p>Our team is here to help with fragrance recommendations, product questions, and order support.</p>
+      <div class="contact-detail"><i class="fa-solid fa-location-dot"></i><div><strong>Visit Us</strong><span>Sialkot, Pakistan</span></div></div>
+      <div class="contact-detail"><i class="fa-solid fa-envelope"></i><div><strong>Email</strong><span>info@elora.com</span></div></div>
+      <div class="contact-detail"><i class="fa-solid fa-phone"></i><div><strong>Phone</strong><span>+92 300 1234567</span></div></div>
+      <div class="contact-detail"><i class="fa-regular fa-clock"></i><div><strong>Hours</strong><span>Monday – Saturday<br>10:00 AM – 6:00 PM</span></div></div>
+    </div>
+    <div class="contact-form-card">
+      <h2>Send a Message</h2>
+      <p>Fill in the form below and your email app will open with the message ready to send.</p>
+      <form class="contact-form" id="contactForm">
+        <div class="contact-field"><label for="contactName">Name</label><input id="contactName" name="name" type="text" required placeholder="Your name"></div>
+        <div class="contact-field"><label for="contactEmail">Email</label><input id="contactEmail" name="email" type="email" required placeholder="you@example.com"></div>
+        <div class="contact-field full"><label for="contactSubject">Subject</label><input id="contactSubject" name="subject" type="text" required placeholder="How can we help?"></div>
+        <div class="contact-field full"><label for="contactMessage">Message</label><textarea id="contactMessage" name="message" required placeholder="Write your message..."></textarea></div>
+        <button type="submit" class="contact-submit">SEND MESSAGE <i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+      <div class="contact-success" id="contactSuccess">Your email app should now be open with your message. If it did not open, please email us directly at info@elora.com.</div>
+    </div>
+  </div>
+</section>
+</main>
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <span class="footer-logo-symbol">✧</span>
+          <span class="footer-logo-name">ÉLORA</span>
+        </a>
+        <p>Luxury Perfumes for a Timeless You.</p>
+        <div class="footer-socials" aria-label="Social links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <a href="index.html">› Home</a>
+        <a href="index.html#about-brand">› About Us</a>
+        <a href="index.html#featured-products">› Shop</a>
+        <a href="collection.html">› Collection</a>
+        <a href="contact.html">› Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Help &amp; Support</h3>
+        <a href="#">› FAQs</a>
+        <a href="#">› Shipping Policy</a>
+        <a href="#">› Return &amp; Refund Policy</a>
+        <a href="#">› Terms &amp; Conditions</a>
+        <a href="#">› Privacy Policy</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fa-solid fa-location-dot"></i> Sialkot, Pakistan</p>
+        <p><i class="fa-solid fa-envelope"></i> info@elora.com</p>
+        <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+        <span class="footer-follow">Follow us for the latest updates</span>
+        <div class="footer-socials footer-socials-small">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 ÉLORA. All Rights Reserved.</span>
+      <span>Elegance&nbsp; | &nbsp;Luxury&nbsp; | &nbsp;Timeless</span>
+    </div>
+  </div>
+</footer><script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var form = document.getElementById('contactForm');
+  var success = document.getElementById('contactSuccess');
+  if (!form) return;
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var name = document.getElementById('contactName').value.trim();
+    var email = document.getElementById('contactEmail').value.trim();
+    var subject = document.getElementById('contactSubject').value.trim();
+    var message = document.getElementById('contactMessage').value.trim();
+    var body = 'Name: ' + name + '\nEmail: ' + email + '\n\n' + message;
+    window.location.href = 'mailto:info@elora.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+    if (success) success.style.display = 'block';
+  });
+});
+</script>
+
+</body>
+</html>

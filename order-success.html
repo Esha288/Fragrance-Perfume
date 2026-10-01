@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Order confirmation and status for your ÉLÉGANCE fragrance order.">
+<title>Order Confirmed | ÉLÉGANCE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+.order-page{min-height:calc(100vh - 82px);padding:85px 0 90px;background:#fbf6ee}
+.order-wrap{width:92%;max-width:1080px;margin:auto}
+.order-hero{background:#fff;border:1px solid rgba(75,18,29,.1);padding:42px 44px;text-align:center;margin-bottom:24px}
+.order-check{width:66px;height:66px;border-radius:50%;margin:0 auto 18px;display:flex;align-items:center;justify-content:center;background:#4b121d;color:#fff;font-size:25px}
+.order-hero .section-eyebrow{color:#a67c52}
+.order-hero h1{font-family:"Cormorant Garamond",serif;color:#4b121d;font-size:46px;margin:8px 0}
+.order-hero p{font-size:13px;color:#6e5c52;line-height:1.7}
+.reference{display:inline-block;margin-top:18px;padding:10px 16px;background:#fbf6ee;border:1px solid #e5d6cb;color:#4b121d;font-size:12px;letter-spacing:.08em;font-weight:600}
+.order-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:24px;align-items:start}
+.order-card{background:#fff;border:1px solid rgba(75,18,29,.1);padding:28px}
+.order-card h2{font-family:"Cormorant Garamond",serif;color:#4b121d;font-size:28px;margin:0 0 20px}
+.status-track{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin:10px 0 28px;position:relative}
+.status-step{position:relative;text-align:center;color:#9a8a81;font-size:10px;text-transform:uppercase;letter-spacing:.05em}
+.status-dot{width:30px;height:30px;border-radius:50%;margin:0 auto 9px;border:1px solid #d8c8bd;background:#fff;display:flex;align-items:center;justify-content:center;font-size:11px}
+.status-step.active{color:#4b121d;font-weight:600}
+.status-step.active .status-dot{background:#4b121d;border-color:#4b121d;color:#fff}
+.status-step.cancelled{color:#8b1f2d}
+.status-step.cancelled .status-dot{background:#8b1f2d;border-color:#8b1f2d;color:#fff}
+.order-items{border-top:1px solid #eee5df}
+.order-item{display:grid;grid-template-columns:64px 1fr auto;gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid #eee5df}
+.order-item img{width:64px;height:74px;object-fit:cover;background:#f5eee8}
+.order-item strong{font-family:"Cormorant Garamond",serif;color:#4b121d;font-size:19px}
+.order-item small{display:block;color:#806f66;font-size:10px;margin-top:4px}
+.order-item b{font-size:12px;color:#4b121d}
+.info-row{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid #eee5df;font-size:12px}
+.info-row span{color:#806f66}.info-row strong{color:#4b121d;text-align:right}
+.total-row{display:flex;justify-content:space-between;padding:18px 0 0;color:#4b121d;font-size:17px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.actions a{flex:1;min-width:170px;text-align:center;text-decoration:none;padding:13px 16px;font:600 11px Poppins,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.primary{background:#4b121d;color:#fff}.secondary{border:1px solid #4b121d;color:#4b121d;background:#fff}
+.not-found{text-align:center;padding:70px 20px}.not-found h1{font-family:"Cormorant Garamond",serif;color:#4b121d}
+@media(max-width:800px){.order-grid{grid-template-columns:1fr}.order-hero{padding:32px 22px}.order-hero h1{font-size:37px}.order-card{padding:21px}}
+@media(max-width:520px){.status-track{grid-template-columns:1fr 1fr;gap:18px}.order-item{grid-template-columns:52px 1fr auto}.order-item img{width:52px;height:62px}}
+</style>
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="brand-logo"><div class="logo-symbol">E</div><div class="brand-text"><span>ÉLÉGANCE</span><small>LUXURY PERFUMES</small></div></a>
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="contact.html" class="nav-link">Contact Us</a>
+      <div class="dropdown"><a href="collection.html" class="dropdown-btn nav-link">Collection <i class="fa-solid fa-chevron-down"></i></a><div class="dropdown-menu">
+        <a href="collections.html?collection=women" class="dropdown-item"><span>Women</span></a><a href="collections.html?collection=men" class="dropdown-item"><span>Men</span></a><a href="collections.html?collection=unisex" class="dropdown-item"><span>Unisex</span></a><a href="collections.html?collection=oud-attar" class="dropdown-item"><span>Oud &amp; Attar</span></a><a href="collections.html?collection=gift-sets" class="dropdown-item"><span>Gift Sets</span></a><a href="collections.html?collection=new-arrivals" class="dropdown-item"><span>New Arrivals</span></a><a href="collections.html?collection=best-sellers" class="dropdown-item"><span>Best Sellers</span></a><a href="collections.html?collection=limited-edition" class="dropdown-item"><span>Limited Edition</span></a>
+      </div></div>
+    </nav>
+    <div class="nav-actions">
+      <a href="favorites.html" class="icon-btn" aria-label="Favorites"><i class="fa-solid fa-heart"></i><span class="favorite-count">0</span></a>
+      <a href="cart.html" class="icon-btn cart-nav-btn" aria-label="Shopping Bag"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a>
+      <a href="index.html#products" class="nav-cta">Shop Now</a>
+      <button class="mobile-menu-btn" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<main class="order-page">
+<div class="order-wrap" id="orderRoot">
+  <section class="order-hero">
+    <div class="order-check"><i class="fa-solid fa-check"></i></div>
+    <span class="section-eyebrow">Order Received</span>
+    <h1>Thank You for Your Order</h1>
+    <p>Your order has been placed successfully. Keep your order reference for future status checks.</p>
+    <div class="reference">Order Reference: <span id="reference">—</span></div>
+  </section>
+
+  <div class="order-grid">
+    <section class="order-card">
+      <h2>Order Status</h2>
+      <div class="status-track" id="statusTrack"></div>
+      <h2>Items Ordered</h2>
+      <div class="order-items" id="items"></div>
+      <div class="total-row"><span>Total</span><strong id="total">$0</strong></div>
+    </section>
+
+    <aside class="order-card">
+      <h2>Delivery Details</h2>
+      <div class="info-row"><span>Customer</span><strong id="customer">—</strong></div>
+      <div class="info-row"><span>Phone</span><strong id="phone">—</strong></div>
+      <div class="info-row"><span>Email</span><strong id="email">—</strong></div>
+      <div class="info-row"><span>Payment</span><strong id="payment">—</strong></div>
+      <div class="info-row"><span>Address</span><strong id="address">—</strong></div>
+      <div class="actions">
+        <a href="index.html" class="primary">Continue Shopping</a>
+        <a href="cart.html" class="secondary">Shopping Bag</a>
+      </div>
+    </aside>
+  </div>
+</div>
+</main>
+
+<script src="script.js"></script>
+<script>
+(function(){
+  const esc=window.escapeHtml||function(v){return String(v??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[m]));};
+  const money=v=>'$'+Number(v||0).toFixed(2).replace(/\.00$/,'');
+  const params=new URLSearchParams(location.search);
+  const ref=params.get('order');
+  const orders=JSON.parse(localStorage.getItem('elegance-orders')||'[]');
+  const last=JSON.parse(localStorage.getItem('elegance-last-order')||'null');
+  const order=orders.find(o=>o.reference===ref)||(last&&orders.find(o=>o.reference===last.reference));
+  if(!order){
+    document.getElementById('orderRoot').innerHTML='<section class="order-card not-found"><h1>Order Not Found</h1><p>We could not find this order in this browser.</p><div class="actions"><a href="index.html" class="primary">Continue Shopping</a></div></section>';
+    return;
+  }
+  const status=order.status||'New';
+  const steps=['New','Processing','Shipped','Delivered'];
+  const current=steps.indexOf(status);
+  document.getElementById('reference').textContent=order.reference;
+  document.getElementById('customer').textContent=[order.customer?.firstName,order.customer?.lastName].filter(Boolean).join(' ')||'—';
+  document.getElementById('phone').textContent=order.customer?.phone||'—';
+  document.getElementById('email').textContent=order.customer?.email||'—';
+  document.getElementById('payment').textContent=(order.payment||'cod').toUpperCase()==='COD'?'Cash on Delivery':'Card / Online Payment';
+  document.getElementById('address').textContent=[order.customer?.address,order.customer?.city,order.customer?.postal,order.customer?.country].filter(Boolean).join(', ')||'—';
+  document.getElementById('total').textContent=money(order.total);
+
+  const track=document.getElementById('statusTrack');
+  if(status==='Cancelled'){
+    track.innerHTML='<div class="status-step cancelled active"><div class="status-dot"><i class="fa-solid fa-xmark"></i></div><span>Cancelled</span></div>';
+  }else{
+    track.innerHTML=steps.map((s,i)=>'<div class="status-step '+(i<=current?'active':'')+'"><div class="status-dot"><i class="fa-solid '+(i<current?'fa-check':i===current?'fa-circle':'fa-lock')+'"></i></div><span>'+s+'</span></div>').join('');
+  }
+
+  document.getElementById('items').innerHTML=(order.items||[]).map(x=>'<div class="order-item"><img src="'+esc(x.img||'')+'" alt="'+esc(x.name)+'"><div><strong>'+esc(x.name)+'</strong><small>Quantity: '+esc(x.qty)+'</small></div><b>'+money((Number(x.price)||0)*(Number(x.qty)||1))+'</b></div>').join('');
+})();
+</script>
+</body>
+</html>

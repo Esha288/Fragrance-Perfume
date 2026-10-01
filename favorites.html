@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Favorites | ÉLÉGANCE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="brand-logo"><div class="logo-symbol">E</div><div class="brand-text"><span>ÉLÉGANCE</span><small>LUXURY PERFUMES</small></div></a>
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="contact.html" class="nav-link">Contact Us</a>
+      <div class="dropdown"><a href="collection.html" class="dropdown-btn nav-link">Collection <i class="fa-solid fa-chevron-down"></i></a><div class="dropdown-menu">
+        <a href="collections.html?collection=women" class="dropdown-item"><span>Women</span></a><a href="collections.html?collection=men" class="dropdown-item"><span>Men</span></a><a href="collections.html?collection=unisex" class="dropdown-item"><span>Unisex</span></a><a href="collections.html?collection=oud-attar" class="dropdown-item"><span>Oud &amp; Attar</span></a><a href="collections.html?collection=gift-sets" class="dropdown-item"><span>Gift Sets</span></a><a href="collections.html?collection=new-arrivals" class="dropdown-item"><span>New Arrivals</span></a><a href="collections.html?collection=best-sellers" class="dropdown-item"><span>Best Sellers</span></a><a href="collections.html?collection=limited-edition" class="dropdown-item"><span>Limited Edition</span></a>
+      </div></div>
+    </nav>
+    <div class="nav-actions"><button class="icon-btn search-toggle" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button><a href="favorites.html" class="icon-btn favorite-nav-btn" aria-label="Favorites"><i class="fa-solid fa-heart"></i><span class="favorite-count">0</span></a><a href="cart.html" class="icon-btn"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a><a href="#account" class="icon-btn"><i class="fa-regular fa-user"></i></a><a href="index.html#products" class="nav-cta">Shop Now</a><button class="mobile-menu-btn" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button></div>
+  </div>
+  <div class="search-box"><div class="search-inner"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search your favorite perfume..." id="searchInput"><button class="close-search"><i class="fa-solid fa-xmark"></i></button></div></div>
+  <div class="mobile-nav-overlay"></div><div class="mobile-nav"><div class="mobile-nav-header"><span>Menu</span><button class="mobile-nav-close"><i class="fa-solid fa-xmark"></i></button></div><a href="index.html">Home</a><a href="index.html#about">About</a><a href="contact.html">Contact Us</a><a href="favorites.html"><i class="fa-solid fa-heart"></i> Favorites (<span class="favorite-count">0</span>)</a><a href="cart.html">Shopping Bag</a><a href="index.html#products" class="mobile-cta">Shop Now</a></div>
+</header>
+<main class="favorites-page"><div class="section-container"><span class="section-eyebrow">Saved For Later</span><h1 class="section-title">My Favorites</h1><p class="section-subtitle">Your saved fragrances are all in one place.</p><div class="favorites-toolbar" id="favoritesToolbar">
+  <div class="favorites-summary"><strong id="favoritesProductCount">0</strong> saved fragrance<span id="favoritesPlural">s</span></div>
+  <button type="button" class="favorites-clear-btn" id="clearAllFavorites"><i class="fa-regular fa-trash-can"></i> Clear All Favorites</button>
+</div>
+<div id="favoritesGrid" class="product-grid favorites-grid"></div>
+<div class="favorites-continue-wrap"><a class="favorites-continue-btn" href="collections.html?collection=women"><i class="fa-solid fa-arrow-left"></i> Continue Shopping</a></div></div></main>
+
+<div class="product-modal-overlay" id="favoritesProductModalOverlay"></div>
+<div class="product-modal" id="favoritesProductModal" aria-hidden="true">
+  <button class="product-modal-close" type="button" aria-label="Close">&times;</button>
+  <div class="product-modal-image"><img src="" alt=""></div>
+  <div class="product-modal-body">
+    <h2 class="product-modal-name"></h2>
+    <p class="product-modal-notes"></p>
+    <div class="product-modal-price"></div>
+    <div class="product-modal-actions">
+      <button type="button" class="product-modal-add">Add to Cart</button>
+      <a href="#" class="product-modal-full-link">View Full Details <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</div>
+<div class="cart-toast"></div>
+<script src="products-data.js"></script><script src="script.js"></script>
+<script>
+(function(){
+  function render(){
+    const grid=document.getElementById("favoritesGrid"); if(!grid) return;
+    const saved=typeof getFavoriteProducts==="function"?getFavoriteProducts():[];
+    const all=(window.ELEGANCE_PRODUCTS&&window.ELEGANCE_PRODUCTS.products)||[];
+    const products=saved.map(x=>all.find(p=>p.id===x.id)||x);
+    const countEl=document.getElementById("favoritesProductCount");
+    const pluralEl=document.getElementById("favoritesPlural");
+    if(countEl) countEl.textContent=products.length;
+    if(pluralEl) pluralEl.textContent=products.length===1?"":"s";
+
+    let html="";
+    if(products.length){
+      html += '<div class="favorites-section-label">Favorite Products</div>';
+      html += products.map(productCardMarkup).join("");
+    }
+    if(!products.length){
+      html='<div class="favorites-empty"><i class="fa-regular fa-heart"></i><h2>Your Favorites is Empty</h2><p>Save the fragrances you love and find them here anytime.</p><a class="nav-cta" href="collections.html?collection=women">Explore Collection</a></div>';
+    }
+    grid.innerHTML=html;
+
+    // Add availability + View Details to every saved product card.
+    grid.querySelectorAll(".product-card").forEach(function(card){
+      const product=products.find(function(item){ return item.id===card.dataset.productId; });
+      if(!product) return;
+      const body=card.querySelector(".product-card-body");
+      const price=card.querySelector(".product-price");
+      if(price){
+        if(product.salePrice){
+          price.innerHTML='<span class="favorite-old-price">'+escapeHtml(product.price)+'</span> <span class="favorite-sale-price">'+escapeHtml(product.salePrice)+'</span>';
+        }
+      }
+      if(body){
+        const stock=document.createElement("div");
+        stock.className="favorite-stock-status"+(product.inStock===false?" out-of-stock":"");
+        stock.innerHTML=product.inStock===false?'Out of Stock':'In Stock';
+        const actions=body.querySelector(".product-actions");
+        if(actions){
+          actions.insertAdjacentElement("beforebegin",stock);
+          const details=document.createElement("a");
+          details.className="btn-view-details";
+          details.href="product.html?id="+encodeURIComponent(product.id);
+          details.textContent="View Details";
+          actions.appendChild(details);
+        }
+      }
+      bindProductCard(card, product);
+      const detailsBtn = card.querySelector(".btn-view-details");
+      if (detailsBtn) {
+        detailsBtn.addEventListener("click", function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+          window.location.href = "product.html?id=" + encodeURIComponent(product.id);
+        });
+      }
+    });
+    updateFavoriteButtons();
+    if (typeof updateFavoriteCount === "function") updateFavoriteCount();
+  }
+
+  function clearAll(){
+    const productCount=getFavoriteProducts().length;
+    if(!productCount) return;
+    if(!confirm("Clear all saved favorites?")) return;
+    localStorage.removeItem("eloraFavoriteProducts");
+    render();
+    if(typeof updateFavoriteCount==="function") updateFavoriteCount();
+    if(typeof showFavoriteToast==="function") showFavoriteToast("All favorites cleared");
+  }
+
+  window.renderFavoritesPage=render;
+  document.addEventListener("click", function(e){
+    const btn=e.target.closest("#clearAllFavorites");
+    if(btn) clearAll();
+  });
+  render();
+})();
+</script>
+</body></html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Your ÉLÉGANCE shopping bag.">
+<title>Shopping Bag | ÉLÉGANCE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="brand-logo"><div class="logo-symbol">E</div><div class="brand-text"><span>ÉLÉGANCE</span><small>LUXURY PERFUMES</small></div></a>
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="contact.html" class="nav-link">Contact Us</a>
+      <div class="dropdown"><a href="collection.html" class="dropdown-btn nav-link">Collection <i class="fa-solid fa-chevron-down"></i></a><div class="dropdown-menu">
+        <a href="collections.html?collection=women" class="dropdown-item"><span>Women</span></a><a href="collections.html?collection=men" class="dropdown-item"><span>Men</span></a><a href="collections.html?collection=unisex" class="dropdown-item"><span>Unisex</span></a><a href="collections.html?collection=oud-attar" class="dropdown-item"><span>Oud &amp; Attar</span></a><a href="collections.html?collection=gift-sets" class="dropdown-item"><span>Gift Sets</span></a><a href="collections.html?collection=new-arrivals" class="dropdown-item"><span>New Arrivals</span></a><a href="collections.html?collection=best-sellers" class="dropdown-item"><span>Best Sellers</span></a><a href="collections.html?collection=limited-edition" class="dropdown-item"><span>Limited Edition</span></a>
+      </div></div>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn search-toggle" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <a href="cart.html" class="icon-btn cart-nav-btn" aria-label="Shopping Bag" title="Shopping Bag"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a>
+      <a href="#account" class="icon-btn" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+      <a href="index.html#products" class="nav-cta">Shop Now</a>
+      <button class="mobile-menu-btn" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="search-box"><div class="search-inner"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search your favorite perfume..." id="searchInput"><button class="close-search" aria-label="Close Search"><i class="fa-solid fa-xmark"></i></button></div></div>
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav"><div class="mobile-nav-header"><span>Menu</span><button class="mobile-nav-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button></div>
+    <a href="index.html">Home</a><a href="index.html#about">About</a><a href="contact.html">Contact Us</a>
+    <div class="mobile-collection"><button class="mobile-collection-btn">Collection <i class="fa-solid fa-chevron-down"></i></button><div class="mobile-dropdown">
+      <a href="collections.html?collection=women">Women</a><a href="collections.html?collection=men">Men</a><a href="collections.html?collection=unisex">Unisex</a><a href="collections.html?collection=oud-attar">Oud &amp; Attar</a><a href="collections.html?collection=gift-sets">Gift Sets</a><a href="collections.html?collection=new-arrivals">New Arrivals</a><a href="collections.html?collection=best-sellers">Best Sellers</a><a href="collections.html?collection=limited-edition">Limited Edition</a>
+    </div></div>
+    <a href="favorites.html"><i class="fa-solid fa-heart"></i> Favorites (<span class="favorite-count">0</span>)</a>
+    <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i> Shopping Bag (<span class="cart-count">0</span>)</a>
+    <a href="index.html#products" class="mobile-cta">Shop Now</a>
+  </div>
+</header>
+
+<main class="cart-page">
+  <div class="section-container">
+    <span class="section-eyebrow">Your Selection</span>
+    <h1 class="section-title">Shopping Bag</h1>
+    <p class="section-subtitle">Review your selected fragrances before checkout.</p>
+    <div class="cart-toolbar">
+      <div class="cart-summary"><strong id="cartItemCount">0</strong> item<span id="cartPlural">s</span> in your bag</div>
+      <button type="button" class="cart-clear-btn" id="clearCart"><i class="fa-regular fa-trash-can"></i> Clear Bag</button>
+    </div>
+    <div class="cart-layout">
+      <section id="cartItems" class="cart-items" aria-live="polite"></section>
+      <aside class="cart-summary-card" id="cartSummaryCard">
+        <h2>Order Summary</h2>
+        <div class="cart-summary-row"><span>Subtotal</span><strong id="cartSubtotal">$0</strong></div>
+        <div class="cart-summary-row"><span>Shipping</span><span>Calculated at checkout</span></div>
+        <div class="cart-summary-row total"><span>Total</span><strong id="cartTotal">$0</strong></div>
+        <a href="checkout.html" class="cart-checkout-btn" id="checkoutBtn">Proceed to Checkout</a>
+        <a href="collections.html?collection=women" class="cart-continue-btn"><i class="fa-solid fa-arrow-left"></i>&nbsp; Continue Shopping</a>
+      </aside>
+    </div>
+  </div>
+</main>
+<div class="cart-toast"></div>
+<script src="products-data.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  const itemsEl=document.getElementById('cartItems');
+  const countEl=document.getElementById('cartItemCount');
+  const pluralEl=document.getElementById('cartPlural');
+  const subtotalEl=document.getElementById('cartSubtotal');
+  const totalEl=document.getElementById('cartTotal');
+  const clearBtn=document.getElementById('clearCart');
+  const checkoutBtn=document.getElementById('checkoutBtn');
+  const currency=v=>String(v||'').trim();
+  function moneyNumber(value){
+    const n=parseFloat(String(value||'').replace(/[^0-9.\-]/g,''));
+    return Number.isFinite(n)?n:0;
+  }
+  function money(value){ return '$'+value.toFixed(2).replace(/\.00$/,''); }
+  function render(){
+    const cart=typeof getCart==='function'?getCart():[];
+    const products=(window.ELEGANCE_PRODUCTS&&window.ELEGANCE_PRODUCTS.products)||[];
+    const enriched=cart.map(item=>{
+      const p=products.find(x=>x.id===item.id)||products.find(x=>x.name===item.name)||{};
+      return Object.assign({},p,item,{qty:Math.max(1,parseInt(item.qty,10)||1)});
+    });
+    const totalQty=enriched.reduce((s,i)=>s+i.qty,0);
+    const subtotal=enriched.reduce((s,i)=>s+(moneyNumber(i.salePrice||i.price)*i.qty),0);
+    countEl.textContent=totalQty;
+    pluralEl.textContent=totalQty===1?'':'s';
+    subtotalEl.textContent=money(subtotal);
+    totalEl.textContent=money(subtotal);
+    if(!enriched.length){
+      itemsEl.innerHTML='<div class="cart-empty"><i class="fa-solid fa-bag-shopping"></i><h2>Your Shopping Bag is Empty</h2><p>Add the fragrances you love and they will appear here.</p><a class="nav-cta" href="collections.html?collection=women">Explore Collection</a></div>';
+      checkoutBtn.style.pointerEvents='none'; checkoutBtn.style.opacity='.45';
+      return;
+    }
+    checkoutBtn.style.pointerEvents='auto'; checkoutBtn.style.opacity='1';
+    itemsEl.innerHTML=enriched.map((item,index)=>{
+      const price=item.salePrice||item.price||'';
+      const old=item.salePrice?'<span class="cart-item-old-price">'+escapeHtml(item.price)+'</span>':'';
+      const details=item.id?'product.html?id='+encodeURIComponent(item.id):'#';
+      return '<article class="cart-item" data-index="'+index+'">'
+        +'<a class="cart-item-image" href="'+details+'"><img src="'+escapeHtml(item.img||'')+'" alt="'+escapeHtml(item.name||'Product')+'"></a>'
+        +'<div class="cart-item-info"><h3><a href="'+details+'" style="color:inherit;text-decoration:none">'+escapeHtml(item.name||'Product')+'</a></h3><p class="cart-item-notes">'+escapeHtml(item.notes||'')+'</p><div class="cart-item-price">'+old+escapeHtml(price)+'</div><div class="cart-item-qty"><button class="cart-qty-btn" data-action="minus" aria-label="Decrease quantity">−</button><span class="cart-qty-value">'+item.qty+'</span><button class="cart-qty-btn" data-action="plus" aria-label="Increase quantity">+</button></div></div>'
+        +'<div class="cart-item-right"><div class="cart-item-total">'+money(moneyNumber(price)*item.qty)+'</div><button class="cart-remove-btn" data-action="remove">Remove</button></div>'
+        +'</article>';
+    }).join('');
+  }
+  itemsEl.addEventListener('click',function(e){
+    const btn=e.target.closest('[data-action]'); if(!btn) return;
+    const card=btn.closest('.cart-item'); if(!card) return;
+    const index=parseInt(card.dataset.index,10); const cart=getCart(); if(!cart[index]) return;
+    const action=btn.dataset.action;
+    if(action==='plus') cart[index].qty=(parseInt(cart[index].qty,10)||1)+1;
+    if(action==='minus') cart[index].qty=Math.max(1,(parseInt(cart[index].qty,10)||1)-1);
+    if(action==='remove') cart.splice(index,1);
+    saveCart(cart); updateCartBadge(); render();
+  });
+  clearBtn.addEventListener('click',function(){
+    const cart=getCart(); if(!cart.length) return;
+    if(!confirm('Clear all products from your shopping bag?')) return;
+    saveCart([]); updateCartBadge(); render(); showCartToast('Shopping bag cleared');
+  });
+  window.renderCartPage=render;
+  render();
+})();
+</script>
+</body>
+</html>

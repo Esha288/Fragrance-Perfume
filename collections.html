@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore ÉLÉGANCE fragrance collections — women, men, unisex, oud & attar, gift sets, new arrivals, best sellers and limited edition.">
+    <title>Collections | ÉLÉGANCE</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a1a1a'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%23c9a227' font-family='Georgia,serif'%3EE%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body class="no-collection-banner">
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="brand-logo">
+            <div class="logo-symbol">E</div>
+            <div class="brand-text">
+                <span>ÉLÉGANCE</span>
+                <small>LUXURY PERFUMES</small>
+            </div>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+
+            <div class="dropdown">
+                <a href="collection.html" class="dropdown-btn nav-link">Collection <i class="fa-solid fa-chevron-down"></i></a>
+
+                <div class="dropdown-menu">
+                    <a href="collections.html?collection=women" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Women" alt="Women's fragrances">
+                        <span>Women</span>
+                    </a>
+                    <a href="collections.html?collection=men" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Men" alt="Men's fragrances">
+                        <span>Men</span>
+                    </a>
+                    <a href="collections.html?collection=unisex" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Unisex" alt="Unisex fragrances">
+                        <span>Unisex</span>
+                    </a>
+                    <a href="collections.html?collection=oud-attar" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Oud" alt="Oud and attar">
+                        <span>Oud &amp; Attar</span>
+                    </a>
+                    <a href="collections.html?collection=gift-sets" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Gifts" alt="Gift sets">
+                        <span>Gift Sets</span>
+                    </a>
+                    <a href="collections.html?collection=new-arrivals" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=New" alt="New arrivals">
+                        <span>New Arrivals</span>
+                    </a>
+                    <a href="collections.html?collection=best-sellers" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Best" alt="Best sellers">
+                        <span>Best Sellers</span>
+                    </a>
+                    <a href="collections.html?collection=limited-edition" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Limited" alt="Limited edition">
+                        <span>Limited Edition</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn search-toggle" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <a href="cart.html" class="icon-btn" aria-label="Shopping Bag">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <a href="#account" class="icon-btn" aria-label="Account">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <a href="#shop" class="nav-cta">Shop Now</a>
+
+            <button class="mobile-menu-btn" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <div class="search-inner">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search your favorite perfume..." id="searchInput">
+            <button class="close-search" aria-label="Close Search">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="mobile-nav-overlay"></div>
+
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span>Menu</span>
+            <button class="mobile-nav-close" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="contact.html">Contact Us</a>
+
+        <div class="mobile-collection">
+            <button class="mobile-collection-btn">
+                Collection <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="mobile-dropdown">
+                <a href="collections.html?collection=women"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=W" alt="">Women</a>
+                <a href="collections.html?collection=men"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=M" alt="">Men</a>
+                <a href="collections.html?collection=unisex"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=U" alt="">Unisex</a>
+                <a href="collections.html?collection=oud-attar"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=O" alt="">Oud &amp; Attar</a>
+                <a href="collections.html?collection=gift-sets"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=G" alt="">Gift Sets</a>
+                <a href="collections.html?collection=new-arrivals"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=N" alt="">New Arrivals</a>
+                <a href="collections.html?collection=best-sellers"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=B" alt="">Best Sellers</a>
+                <a href="collections.html?collection=limited-edition"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=L" alt="">Limited Edition</a>
+            </div>
+        </div>
+
+        <a href="#account">Account</a>
+        <a href="cart.html">Shopping Bag</a>
+
+        <a href="#shop" class="mobile-cta">Shop Now</a>
+    </div>
+</header>
+
+<!-- Collection content is rendered by the single editable collections.html file. -->
+
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <span class="footer-logo-symbol">✧</span>
+          <span class="footer-logo-name">ÉLORA</span>
+        </a>
+        <p>Luxury Perfumes for a Timeless You.</p>
+        <div class="footer-socials" aria-label="Social links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <a href="index.html">› Home</a>
+        <a href="index.html#about-brand">› About Us</a>
+        <a href="index.html#featured-products">› Shop</a>
+        <a href="collection.html">› Collection</a>
+        <a href="contact.html">› Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Help &amp; Support</h3>
+        <a href="#">› FAQs</a>
+        <a href="#">› Shipping Policy</a>
+        <a href="#">› Return &amp; Refund Policy</a>
+        <a href="#">› Terms &amp; Conditions</a>
+        <a href="#">› Privacy Policy</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fa-solid fa-location-dot"></i> Sialkot, Pakistan</p>
+        <p><i class="fa-solid fa-envelope"></i> info@elora.com</p>
+        <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+        <span class="footer-follow">Follow us for the latest updates</span>
+        <div class="footer-socials footer-socials-small">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 ÉLORA. All Rights Reserved.</span>
+      <span>Elegance&nbsp; | &nbsp;Luxury&nbsp; | &nbsp;Timeless</span>
+    </div>
+  </div>
+</footer>
+
+<div class="product-modal-overlay"></div>
+<div class="product-modal">
+    <button class="product-modal-close" aria-label="Close">&times;</button>
+    <div class="product-modal-image">
+        <img src="" alt="">
+    </div>
+    <div class="product-modal-body">
+        <h2 class="product-modal-name"></h2>
+        <p class="product-modal-notes"></p>
+        <div class="product-modal-price"></div>
+        <div class="product-modal-actions">
+            <button class="product-modal-add">Add to Cart</button>
+            <a href="#" class="product-modal-full-link">View Full Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="cart-toast"></div>
+
+<script src="products-data.js"></script>
+<script src="script.js"></script>
+
+<script>
+/* ============================================================
+   ELEGANCE — SINGLE COLLECTION EDITOR
+   EDIT THIS ONE FILE (collections.html) to change:
+   - Collection banners
+   - Collection titles/descriptions
+   - Collection product/category filtering
+   - Product card design
+   All collection pages use this same file via ?collection=...
+   ============================================================ */
+(function () {
+  "use strict";
+
+  const COLLECTIONS = {
+    women: { title: "Women's Collection", eyebrow: "Collection", description: "An expression of grace — florals, musks and soft woods composed for the modern woman.", banner: "collection-background.png" },
+    men: { title: "Men's Collection", eyebrow: "Collection", description: "Bold woods, refined spices and modern accords crafted for the contemporary man.", banner: "collection-background.png" },
+    unisex: { title: "Unisex Collection", eyebrow: "Collection", description: "Fresh, modern and versatile fragrances designed to be worn your way.", banner: "collection-background.png" },
+    "oud-attar": { title: "Oud & Attar", eyebrow: "Collection", description: "Rich, smoky and exotic compositions inspired by timeless Eastern perfumery.", banner: "collection-background.png" },
+    "gift-sets": { title: "Gift Sets", eyebrow: "Collection", description: "Thoughtfully curated fragrance sets, ready to gift or collect.", banner: "collection-background.png" },
+    "new-arrivals": { title: "New Arrivals", eyebrow: "Collection", description: "Fresh, seasonal and exclusive fragrances from the latest ÉLÉGANCE collection.", banner: "collection-background.png" },
+    "best-sellers": { title: "Best Sellers", eyebrow: "Collection", description: "Our most loved fragrances, worn and re-ordered again and again.", banner: "collection-background.png" },
+    "limited-edition": { title: "Limited Edition", eyebrow: "Collection", description: "Rare, collectible and exclusive fragrances created for special moments.", banner: "collection-background.png" }
+  };
+
+  const escapeHTML = value => String(value ?? "").replace(/[&<>'"]/g, c => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", "'": "&#39;", '"': "&quot;"
+  }[c]));
+
+  function getCollectionKey() {
+    const params = new URLSearchParams(location.search);
+    const requested = (params.get("collection") || "women").toLowerCase();
+    return COLLECTIONS[requested] ? requested : "women";
+  }
+
+  function getProducts() {
+    const data = window.ELEGANCE_PRODUCTS;
+    return Array.isArray(data) ? data : (data && Array.isArray(data.products) ? data.products : []);
+  }
+
+  function productCard(product) {
+    const id = encodeURIComponent(product.id || "");
+    const details = `product.html?id=${id}`;
+    return `
+      <article class="single-product-card" data-product-id="${escapeHTML(product.id || "")}">
+        <button class="product-favorite single-product-favorite" type="button" data-product-id="${escapeHTML(product.id || "")}" aria-label="Add to favorites" aria-pressed="false" title="Add to favorites"><i class="fa-regular fa-heart"></i></button>
+        <a class="single-product-image" href="${details}" aria-label="View details for ${escapeHTML(product.name)}">
+          <img src="${escapeHTML(product.img)}" alt="${escapeHTML(product.name)}" loading="lazy">
+        </a>
+        <div class="single-product-body">
+          <span class="single-product-category">${escapeHTML(product.category || "Fragrance")}</span>
+          <h3><a href="${details}">${escapeHTML(product.name)}</a></h3>
+          <p>${escapeHTML(product.notes || "")}</p>
+          <div class="single-product-bottom">
+            <strong>${escapeHTML(product.price || "")}</strong>
+            <a href="${details}" class="single-view-product">View Details <span>→</span></a>
+          </div>
+        </div>
+      </article>`;
+  }
+
+  function render() {
+    const key = getCollectionKey();
+    const meta = COLLECTIONS[key];
+    document.title = `${meta.title} | ÉLÉGANCE`;
+
+    const old = document.getElementById("single-collection-system");
+    if (old) old.remove();
+
+    const products = getProducts().filter(product => Array.isArray(product.collections) && product.collections.includes(key));
+    const wrapper = document.createElement("main");
+    wrapper.id = "single-collection-system";
+    wrapper.innerHTML = `
+      <section class="single-collection-hero" style="--collection-bg:url('${meta.banner}')">
+        <div class="single-hero-overlay"></div>
+        <div class="single-collection-content">
+          <span class="single-eyebrow">${escapeHTML(meta.eyebrow)}</span>
+          <h1>${escapeHTML(meta.title)}</h1>
+          <p>${escapeHTML(meta.description)}</p>
+          <a href="index.html#products" class="single-back">← Back to All Collections</a>
+        </div>
+      </section>
+
+      <section class="single-collection-products" id="collection-products">
+        <div class="single-container">
+          <div class="single-section-heading">
+            <span>ÉLÉGANCE</span>
+            <h2>${escapeHTML(meta.title)}</h2>
+            <p>Discover the collection and find your signature fragrance.</p>
+          </div>
+          <div class="single-product-grid">
+            ${products.length ? products.map(productCard).join("") : '<p class="single-empty">No products found in this collection.</p>'}
+          </div>
+        </div>
+      </section>`;
+
+    const footer = document.querySelector("footer.site-footer");
+    if (footer) footer.parentNode.insertBefore(wrapper, footer);
+    else document.body.appendChild(wrapper);
+  }
+
+  function addStyles() {
+    if (document.getElementById("single-collection-css")) return;
+    const style = document.createElement("style");
+    style.id = "single-collection-css";
+    style.textContent = `
+      #single-collection-system{font-family:inherit;color:#1a1a1a;background:#fbf8f4}
+      .single-collection-hero{position:relative;min-height:460px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background-image:var(--collection-bg),linear-gradient(135deg,#f7efe6,#ead7cc 55%,#fbf8f4);background-size:cover;background-position:center;isolation:isolate}
+      .single-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.86),rgba(255,255,255,.54),rgba(255,255,255,.72));z-index:-1}
+      .single-collection-content{position:relative;z-index:1;max-width:820px;padding:90px 24px}
+      .single-eyebrow{display:inline-block;letter-spacing:.28em;text-transform:uppercase;font-size:12px;font-weight:600;color:#4b121d;margin-bottom:18px}
+      .single-collection-hero h1{margin:0;color:#4b121d;font-size:clamp(40px,6vw,76px);line-height:1.05;font-weight:500}
+      .single-collection-hero p{max-width:650px;margin:22px auto 28px;color:#222;font-size:16px;line-height:1.8}
+      .single-back{display:inline-flex;align-items:center;gap:8px;color:#4b121d;text-decoration:none;border-bottom:1px solid #4b121d;padding-bottom:5px;font-size:13px;letter-spacing:.05em}
+      .single-collection-products{padding:78px 20px 100px;background:#fbf8f4}
+      .single-container{max-width:1240px;margin:0 auto}
+      .single-section-heading{text-align:center;margin-bottom:45px}
+      .single-section-heading>span{font-size:11px;letter-spacing:.25em;color:#9a7b4f;text-transform:uppercase}
+      .single-section-heading h2{margin:10px 0;color:#4b121d;font-size:34px;font-weight:500}
+      .single-section-heading p{margin:0;color:#666;font-size:14px}
+      .single-product-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px}
+      .single-product-card{position:relative;background:#fff;border:1px solid rgba(75,18,29,.08);transition:transform .3s ease,box-shadow .3s ease;overflow:hidden}
+      .single-product-card:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(75,18,29,.12)}
+      .single-product-favorite{position:absolute;top:12px;right:12px;width:38px;height:38px;border:1px solid rgba(75,18,29,.16);border-radius:50%;background:rgba(255,255,255,.96);color:#4b121d;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;z-index:10;box-shadow:0 6px 18px rgba(75,18,29,.12);transition:transform .22s ease,background .22s ease,color .22s ease,border-color .22s ease}
+      .single-product-favorite:hover{transform:scale(1.08);border-color:#4b121d}
+      .single-product-favorite i{pointer-events:none;font-size:15px}
+      .single-product-favorite.is-favorite{background:#4b121d;color:#fff;border-color:#4b121d}
+      .single-product-image{display:block;aspect-ratio:1/1;background:#f5f0eb;overflow:hidden}
+      .single-product-image img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+      .single-product-card:hover .single-product-image img{transform:scale(1.035)}
+      .single-product-body{padding:20px}
+      .single-product-category{text-transform:uppercase;letter-spacing:.14em;font-size:9px;color:#9a7b4f}
+      .single-product-body h3{margin:8px 0;font-size:17px;font-weight:500}
+      .single-product-body h3 a{color:#4b121d;text-decoration:none}
+      .single-product-body p{margin:0 0 18px;color:#777;font-size:12px;line-height:1.6;min-height:38px}
+      .single-product-bottom{display:flex;align-items:center;justify-content:space-between;gap:10px}
+      .single-product-bottom strong{color:#4b121d;font-size:14px}
+      .single-view-product{color:#4b121d;text-decoration:none;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+      .single-empty{grid-column:1/-1;text-align:center;padding:50px;color:#777}
+      @media(max-width:1000px){.single-product-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+      @media(max-width:700px){.single-collection-hero{min-height:400px;background-position:center}.single-collection-content{padding:70px 20px}.single-product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.single-product-body{padding:14px}.single-product-body p{font-size:11px}.single-product-bottom{align-items:flex-start;flex-direction:column;gap:8px}}
+      @media(max-width:430px){.single-product-grid{gap:10px}.single-product-body h3{font-size:14px}.single-product-body p{min-height:34px}.single-collection-products{padding-left:12px;padding-right:12px}}
+    `;
+    document.head.appendChild(style);
+  }
+
+  function init(){ addStyles(); render(); }
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", init); else init();
+})();
+
+</script>
+</body>
+</html>

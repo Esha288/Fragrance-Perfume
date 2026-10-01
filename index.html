@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ÉLÉGANCE — luxury perfumes for women, men and unisex. Discover oud & attar, gift sets, new arrivals, best sellers and limited-edition fragrances.">
+    <title>ÉLÉGANCE | Luxury Perfumes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%231a1a1a'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='%23c9a227' font-family='Georgia,serif'%3EE%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="nav-container">
+
+        <a href="index.html" class="brand-logo">
+            <div class="logo-symbol">E</div>
+            <div class="brand-text">
+                <span>ÉLÉGANCE</span>
+                <small>LUXURY PERFUMES</small>
+            </div>
+        </a>
+
+        <nav class="nav-menu">
+            <a href="index.html" class="nav-link active">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+
+            <div class="dropdown">
+                <a href="collection.html" class="dropdown-btn nav-link">Collection <i class="fa-solid fa-chevron-down"></i></a>
+
+                <div class="dropdown-menu">
+                    <a href="collections.html?collection=women" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Women" alt="Women's fragrances">
+                        <span>Women</span>
+                    </a>
+                    <a href="collections.html?collection=men" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Men" alt="Men's fragrances">
+                        <span>Men</span>
+                    </a>
+                    <a href="collections.html?collection=unisex" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Unisex" alt="Unisex fragrances">
+                        <span>Unisex</span>
+                    </a>
+                    <a href="collections.html?collection=oud-attar" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Oud" alt="Oud and attar">
+                        <span>Oud &amp; Attar</span>
+                    </a>
+                    <a href="collections.html?collection=gift-sets" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Gifts" alt="Gift sets">
+                        <span>Gift Sets</span>
+                    </a>
+                    <a href="collections.html?collection=new-arrivals" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=New" alt="New arrivals">
+                        <span>New Arrivals</span>
+                    </a>
+                    <a href="collections.html?collection=best-sellers" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Best" alt="Best sellers">
+                        <span>Best Sellers</span>
+                    </a>
+                    <a href="collections.html?collection=limited-edition" class="dropdown-item">
+                        <img src="https://placehold.co/120x120/1a1a1a/c9a227?text=Limited" alt="Limited edition">
+                        <span>Limited Edition</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="nav-actions">
+            <button class="icon-btn search-toggle" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <a href="cart.html" class="icon-btn" aria-label="Shopping Bag">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-count">0</span>
+            </a>
+
+            <a href="#account" class="icon-btn" aria-label="Account">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
+            <a href="#shop" class="nav-cta">Shop Now</a>
+
+            <button class="mobile-menu-btn" aria-label="Open Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="search-box">
+        <div class="search-inner">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search your favorite perfume..." id="searchInput">
+            <button class="close-search" aria-label="Close Search">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="mobile-nav-overlay"></div>
+
+    <div class="mobile-nav">
+        <div class="mobile-nav-header">
+            <span>Menu</span>
+            <button class="mobile-nav-close" aria-label="Close Menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="contact.html">Contact Us</a>
+
+        <div class="mobile-collection">
+            <button class="mobile-collection-btn">
+                Collection <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="mobile-dropdown">
+                <a href="collections.html?collection=women"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=W" alt="">Women</a>
+                <a href="collections.html?collection=men"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=M" alt="">Men</a>
+                <a href="collections.html?collection=unisex"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=U" alt="">Unisex</a>
+                <a href="collections.html?collection=oud-attar"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=O" alt="">Oud &amp; Attar</a>
+                <a href="collections.html?collection=gift-sets"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=G" alt="">Gift Sets</a>
+                <a href="collections.html?collection=new-arrivals"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=N" alt="">New Arrivals</a>
+                <a href="collections.html?collection=best-sellers"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=B" alt="">Best Sellers</a>
+                <a href="collections.html?collection=limited-edition"><img src="https://placehold.co/60x60/1a1a1a/c9a227?text=L" alt="">Limited Edition</a>
+            </div>
+        </div>
+
+        <a href="#account">Account</a>
+        <a href="cart.html">Shopping Bag</a>
+
+        <a href="#shop" class="mobile-cta">Shop Now</a>
+    </div>
+</header>
+
+<main class="hero" id="hero">
+
+    <div class="hero-slides">
+        <div class="hero-slide active" style="background-image:url('hero-perfume-new.png')"></div>
+        <div class="hero-slide" style="background-image:url('hero-perfume-second.png')"></div>
+        <div class="hero-slide" style="background-image:url('hero-perfume-third.png')"></div>
+        <div class="hero-slide" style="background-image:url('hero-perfume-fourth.png')"></div>
+    </div>
+
+    <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
+
+    <div class="hero-content">
+        <span class="hero-eyebrow">The New Fragrance Edit</span>
+        <h1 class="hero-title">A Scent That Defines You</h1>
+        <h2 class="hero-subtitle">Every Bottle, A Signature.</h2>
+        <p class="hero-desc">
+            Composed from rare botanicals, precious resins and the finest oud,
+            each fragrance is an invitation to be remembered — elegance,
+            captured in a single note.
+        </p>
+        <a href="#products" class="hero-cta">
+            <span>Explore Collection</span>
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+    </div>
+
+    <button class="hero-arrow hero-arrow-prev" aria-label="Previous slide">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    <button class="hero-arrow hero-arrow-next" aria-label="Next slide">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+
+    <div class="hero-index">
+        <span class="hero-index-current">01</span>
+        <span class="hero-index-divider"></span>
+        <span class="hero-index-total">04</span>
+    </div>
+
+    <div class="hero-dots">
+        <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+    </div>
+
+</main>
+
+<section class="collections-section" id="products">
+    <div class="section-container">
+        <span class="section-eyebrow">Curated For You</span>
+        <h2 class="section-title">Shop by Collection</h2>
+        <p class="section-subtitle">Discover a fragrance crafted for every personality, mood, and moment.</p>
+
+        <div class="collections-grid">
+            <article class="collection-card" data-collection-key="women">
+                <div class="collection-card-img">
+                    <img src="https://images.unsplash.com/photo-1763987300634-7b0822cbf390?auto=format&fit=crop&w=1600&q=80" alt="Women's Collection">
+                </div>
+                <h3 class="collection-name">WOMEN'S COLLECTION</h3>
+                <p class="collection-tagline">Floral • Elegant • Timeless</p>
+                <a href="collections.html?collection=women" class="collection-explore">EXPLORE WOMEN <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="collection-card" data-collection-key="men">
+                <div class="collection-card-img">
+                    <img src="https://images.unsplash.com/photo-1584841247175-4d766cefa018?auto=format&fit=crop&w=1600&q=80" alt="Men's Collection">
+                </div>
+                <h3 class="collection-name">MEN'S COLLECTION</h3>
+                <p class="collection-tagline">Bold • Woody • Refined</p>
+                <a href="collections.html?collection=men" class="collection-explore">EXPLORE MEN <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="collection-card" data-collection-key="unisex">
+                <div class="collection-card-img">
+                    <img src="https://images.unsplash.com/photo-1760920250029-36af9369a0bb?auto=format&fit=crop&w=1600&q=80" alt="Unisex Collection">
+                </div>
+                <h3 class="collection-name">UNISEX COLLECTION</h3>
+                <p class="collection-tagline">Fresh • Modern • Versatile</p>
+                <a href="collections.html?collection=unisex" class="collection-explore">EXPLORE UNISEX <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="collection-card" data-collection-key="oud-attar">
+                <div class="collection-card-img">
+                    <img src="https://images.unsplash.com/photo-1498721425774-488298864da7?auto=format&fit=crop&w=1600&q=80" alt="Oud &amp; Attar Collection">
+                </div>
+                <h3 class="collection-name">OUD &amp; ATTAR</h3>
+                <p class="collection-tagline">Rich • Smoky • Exotic</p>
+                <a href="collections.html?collection=oud-attar" class="collection-explore">EXPLORE OUD <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="collection-card" data-collection-key="gift-sets">
+                <div class="collection-card-img">
+                    <img src="https://images.unsplash.com/photo-1694422789021-54bd74b39f52?auto=format&fit=crop&w=1600&q=80" alt="Gift Sets Collection">
+                </div>
+                <h3 class="collection-name">GIFT SETS</h3>
+                <p class="collection-tagline">Curated • Luxurious • Thoughtful</p>
+                <a href="collections.html?collection=gift-sets" class="collection-explore">EXPLORE GIFTS <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="collection-card" data-collection-key="new-arrivals">
+                <div class="collection-card-img">
+                    <img src="https://images.unsplash.com/photo-1690790591188-3503c1a4dcb6?auto=format&fit=crop&w=1600&q=80" alt="New Arrivals Collection">
+                </div>
+                <h3 class="collection-name">NEW ARRIVALS</h3>
+                <p class="collection-tagline">Fresh • Seasonal • Exclusive</p>
+                <a href="collections.html?collection=new-arrivals" class="collection-explore">EXPLORE NEW <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="collection-card" data-collection-key="best-sellers">
+                <div class="collection-card-img">
+                    <img src="https://images.pexels.com/photos/8501676/pexels-photo-8501676.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Best Sellers Collection">
+                </div>
+                <h3 class="collection-name">BEST SELLERS</h3>
+                <p class="collection-tagline">Iconic • Loved • Timeless</p>
+                <a href="collections.html?collection=best-sellers" class="collection-explore">EXPLORE BEST SELLERS <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+
+            <article class="collection-card" data-collection-key="limited-edition">
+                <div class="collection-card-img">
+                    <img src="https://images.unsplash.com/photo-1709662369957-0cbf9f8452fc?auto=format&fit=crop&w=1600&q=80" alt="Limited Edition Collection">
+                </div>
+                <h3 class="collection-name">LIMITED EDITION</h3>
+                <p class="collection-tagline">Rare • Collectible • Exclusive</p>
+                <a href="collections.html?collection=limited-edition" class="collection-explore">EXPLORE LIMITED <i class="fa-solid fa-arrow-right"></i></a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="collection-products home-featured-products" id="featured-products">
+    <div class="section-container">
+        <span class="section-eyebrow">The ÉLÉGANCE Edit</span>
+        <h2 class="section-title">Featured Fragrances</h2>
+        <p class="section-subtitle">Discover selected fragrances from the same central product catalog used across every collection.</p>
+        <div class="product-grid" data-featured-products aria-live="polite"></div>
+    </div>
+</section>
+
+<section class="why-choose-us" id="why-choose-us">
+    <div class="section-container why-choose-container">
+        <span class="why-choose-eyebrow">Why Choose Us</span>
+        <h2 class="why-choose-title">Experience Fragrance Beyond<br>the Ordinary.</h2>
+        <p class="why-choose-subtitle">We believe in more than just a scent — we believe in creating<br class="why-desktop-break"> moments, emotions and lasting impressions</p>
+
+        <div class="why-features">
+            <div class="why-feature">
+                <div class="why-feature-icon"><i class="fa-solid fa-spray-can-sparkles" aria-hidden="true"></i></div>
+                <h3>Premium Fragrances</h3>
+                <span class="why-feature-subtitle">REFINED SCENTS</span>
+                <div class="why-feature-line"></div>
+                <p>Carefully crafted fragrances<br>designed to create a<br>distinctive signature.</p>
+            </div>
+            <div class="why-feature">
+                <div class="why-feature-icon"><i class="fa-regular fa-clock" aria-hidden="true"></i></div>
+                <h3>Long-Lasting</h3>
+                <span class="why-feature-subtitle">MADE TO LAST</span>
+                <div class="why-feature-line"></div>
+                <p>Elegant fragrances created<br>to stay with you throughout<br>the day.</p>
+            </div>
+            <div class="why-feature">
+                <div class="why-feature-icon"><i class="fa-regular fa-gem" aria-hidden="true"></i></div>
+                <h3>Luxury Quality</h3>
+                <span class="why-feature-subtitle">EXCEPTIONAL QUALITY</span>
+                <div class="why-feature-line"></div>
+                <p>A refined fragrance experience<br>with carefully selected<br>ingredients.</p>
+            </div>
+            <div class="why-feature">
+                <div class="why-feature-icon"><i class="fa-solid fa-gift" aria-hidden="true"></i></div>
+                <h3>Elegant Packaging</h3>
+                <span class="why-feature-subtitle">BEAUTIFULLY PRESENTED</span>
+                <div class="why-feature-line"></div>
+                <p>Every bottle is presented<br>with the elegance your<br>fragrance deserves.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="about-brand" id="about-brand">
+    <div class="section-container about-brand-container">
+        <div class="about-brand-image-wrap">
+            <img src="about-brand.png" alt="ÉLORA luxury perfume and packaging">
+        </div>
+        <div class="about-brand-content">
+            <span class="about-brand-eyebrow">-ABOUT OUR BRAND-</span>
+            <h2 class="about-brand-title">More Than Just a Fragrance,<br><em>It’s a Feeling.</em></h2>
+            <p class="about-brand-text">At ÉLORA, we believe that a fragrance is more than just a scent —<br class="about-desktop-break"> it’s an expression of who you are. Our journey began with a passion<br class="about-desktop-break"> for creating luxurious, long-lasting perfumes that evoke confidence,<br class="about-desktop-break"> elegance and unforgettable moments.</p>
+            <a href="#" class="about-brand-button">LEARN MORE <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+    </div>
+</section>
+
+
+<section class="stay-connected" id="stay-connected">
+    <div class="stay-connected-overlay"></div>
+    <div class="section-container stay-connected-container">
+        <div class="stay-newsletter">
+            <span class="stay-eyebrow">-STAY CONNECTED-</span>
+            <h2 class="stay-title">Join Our Newsletter</h2>
+            <p class="stay-subtitle">Be the first to know about new arrivals, exclusive offers and special events.</p>
+            <form class="stay-form" onsubmit="return false;">
+                <div class="stay-email-wrap">
+                    <i class="fa-regular fa-envelope" aria-hidden="true"></i>
+                    <input type="email" placeholder="Enter your email address" aria-label="Email address">
+                </div>
+                <button type="submit" class="stay-subscribe">SUBSCRIBE <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></button>
+            </form>
+        </div>
+        <div class="stay-benefits">
+            <div class="stay-benefit">
+                <div class="stay-benefit-icon"><i class="fa-solid fa-truck-fast" aria-hidden="true"></i></div>
+                <div><h3>Free Shipping</h3><p>On All Orders</p></div>
+            </div>
+            <div class="stay-benefit">
+                <div class="stay-benefit-icon"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i></div>
+                <div><h3>Secure Payments</h3><p>100% Safe &amp; Secure</p></div>
+            </div>
+            <div class="stay-benefit">
+                <div class="stay-benefit-icon"><i class="fa-solid fa-headset" aria-hidden="true"></i></div>
+                <div><h3>24/7 Support</h3><p>We’re Here to Help</p></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="product-modal-overlay"></div>
+<div class="product-modal">
+    <button class="product-modal-close" aria-label="Close">&times;</button>
+    <div class="product-modal-image"><img src="" alt=""></div>
+    <div class="product-modal-body">
+        <h2 class="product-modal-name"></h2>
+        <p class="product-modal-notes"></p>
+        <div class="product-modal-price"></div>
+        <div class="product-modal-actions">
+            <button class="product-modal-add">Add to Cart</button>
+            <a href="#" class="product-modal-full-link">View Full Details <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </div>
+</div>
+<div class="cart-toast"></div>
+
+<footer class="site-footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo">
+          <span class="footer-logo-symbol">✧</span>
+          <span class="footer-logo-name">ÉLORA</span>
+        </a>
+        <p>Luxury Perfumes for a Timeless You.</p>
+        <div class="footer-socials" aria-label="Social links">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <a href="index.html">› Home</a>
+        <a href="index.html#about-brand">› About Us</a>
+        <a href="index.html#featured-products">› Shop</a>
+        <a href="collection.html">› Collection</a>
+        <a href="contact.html">› Contact</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Help &amp; Support</h3>
+        <a href="#">› FAQs</a>
+        <a href="#">› Shipping Policy</a>
+        <a href="#">› Return &amp; Refund Policy</a>
+        <a href="#">› Terms &amp; Conditions</a>
+        <a href="#">› Privacy Policy</a>
+      </div>
+
+      <div class="footer-column footer-contact">
+        <h3>Contact Us</h3>
+        <p><i class="fa-solid fa-location-dot"></i> Sialkot, Pakistan</p>
+        <p><i class="fa-solid fa-envelope"></i> info@elora.com</p>
+        <p><i class="fa-solid fa-phone"></i> +92 300 1234567</p>
+        <span class="footer-follow">Follow us for the latest updates</span>
+        <div class="footer-socials footer-socials-small">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 ÉLORA. All Rights Reserved.</span>
+      <span>Elegance&nbsp; | &nbsp;Luxury&nbsp; | &nbsp;Timeless</span>
+    </div>
+  </div>
+</footer>
+
+<script src="products-data.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>

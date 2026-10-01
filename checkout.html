@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Secure checkout for your ÉLÉGANCE fragrance order.">
+<title>Checkout | ÉLÉGANCE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+<header class="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="brand-logo"><div class="logo-symbol">E</div><div class="brand-text"><span>ÉLÉGANCE</span><small>LUXURY PERFUMES</small></div></a>
+    <nav class="nav-menu">
+      <a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="contact.html" class="nav-link">Contact Us</a>
+      <div class="dropdown"><a href="collection.html" class="dropdown-btn nav-link">Collection <i class="fa-solid fa-chevron-down"></i></a><div class="dropdown-menu">
+        <a href="collections.html?collection=women" class="dropdown-item"><span>Women</span></a><a href="collections.html?collection=men" class="dropdown-item"><span>Men</span></a><a href="collections.html?collection=unisex" class="dropdown-item"><span>Unisex</span></a><a href="collections.html?collection=oud-attar" class="dropdown-item"><span>Oud &amp; Attar</span></a><a href="collections.html?collection=gift-sets" class="dropdown-item"><span>Gift Sets</span></a><a href="collections.html?collection=new-arrivals" class="dropdown-item"><span>New Arrivals</span></a><a href="collections.html?collection=best-sellers" class="dropdown-item"><span>Best Sellers</span></a><a href="collections.html?collection=limited-edition" class="dropdown-item"><span>Limited Edition</span></a>
+      </div></div>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn search-toggle" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <a href="favorites.html" class="icon-btn favorite-nav-btn" aria-label="Favorites"><i class="fa-solid fa-heart"></i><span class="favorite-count">0</span></a>
+      <a href="cart.html" class="icon-btn cart-nav-btn" aria-label="Shopping Bag"><i class="fa-solid fa-bag-shopping"></i><span class="cart-count">0</span></a>
+      <a href="#account" class="icon-btn" aria-label="Account"><i class="fa-regular fa-user"></i></a>
+      <a href="index.html#products" class="nav-cta">Shop Now</a>
+      <button class="mobile-menu-btn" aria-label="Open Menu"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+  <div class="search-box"><div class="search-inner"><i class="fa-solid fa-magnifying-glass"></i><input type="text" placeholder="Search your favorite perfume..." id="searchInput"><button class="close-search" aria-label="Close Search"><i class="fa-solid fa-xmark"></i></button></div></div>
+  <div class="mobile-nav-overlay"></div>
+  <div class="mobile-nav"><div class="mobile-nav-header"><span>Menu</span><button class="mobile-nav-close" aria-label="Close Menu"><i class="fa-solid fa-xmark"></i></button></div>
+    <a href="index.html">Home</a><a href="index.html#about">About</a><a href="contact.html">Contact Us</a>
+    <div class="mobile-collection"><button class="mobile-collection-btn">Collection <i class="fa-solid fa-chevron-down"></i></button><div class="mobile-dropdown">
+      <a href="collections.html?collection=women">Women</a><a href="collections.html?collection=men">Men</a><a href="collections.html?collection=unisex">Unisex</a><a href="collections.html?collection=oud-attar">Oud &amp; Attar</a><a href="collections.html?collection=gift-sets">Gift Sets</a><a href="collections.html?collection=new-arrivals">New Arrivals</a><a href="collections.html?collection=best-sellers">Best Sellers</a><a href="collections.html?collection=limited-edition">Limited Edition</a>
+    </div></div>
+    <a href="favorites.html"><i class="fa-solid fa-heart"></i> Favorites (<span class="favorite-count">0</span>)</a>
+    <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i> Shopping Bag (<span class="cart-count">0</span>)</a>
+    <a href="index.html#products" class="mobile-cta">Shop Now</a>
+  </div>
+</header>
+
+<main class="checkout-page">
+  <div class="section-container">
+    <span class="section-eyebrow">Complete Your Order</span>
+    <h1 class="section-title">Checkout</h1>
+    <p class="section-subtitle">Enter your delivery details and review your fragrance order.</p>
+
+    <div id="checkoutEmpty" class="checkout-empty" hidden>
+      <i class="fa-solid fa-bag-shopping"></i>
+      <h2>Your Shopping Bag is Empty</h2>
+      <p>Add a fragrance to your bag before continuing to checkout.</p>
+      <a class="nav-cta" href="collections.html?collection=women">Explore Collection</a>
+    </div>
+
+    <form id="checkoutForm" class="checkout-layout" novalidate>
+      <section class="checkout-form-card">
+        <div class="checkout-card-heading"><h2>Delivery Details</h2><span>Required fields *</span></div>
+        <div class="checkout-grid">
+          <label>First Name *<input name="firstName" required autocomplete="given-name"></label>
+          <label>Last Name *<input name="lastName" required autocomplete="family-name"></label>
+          <label class="full">Email Address *<input type="email" name="email" required autocomplete="email"></label>
+          <label class="full">Phone Number *<input name="phone" required autocomplete="tel"></label>
+          <label class="full">Address *<input name="address" required autocomplete="street-address"></label>
+          <label>City *<input name="city" required autocomplete="address-level2"></label>
+          <label>Postal Code *<input name="postal" required autocomplete="postal-code"></label>
+          <label class="full">Country *<input name="country" value="Pakistan" required autocomplete="country-name"></label>
+        </div>
+
+        <div class="checkout-card-heading checkout-payment-heading"><h2>Payment Method</h2></div>
+        <label class="payment-option"><input type="radio" name="payment" value="cod" checked><span><strong>Cash on Delivery</strong><small>Pay when your order arrives.</small></span></label>
+        <label class="payment-option"><input type="radio" name="payment" value="card"><span><strong>Card / Online Payment</strong><small>Payment gateway can be connected here.</small></span></label>
+      </section>
+
+      <aside class="checkout-order-card">
+        <h2>Your Order</h2>
+        <div id="checkoutItems"></div>
+        <div class="checkout-total-row"><span>Subtotal</span><strong id="checkoutSubtotal">$0</strong></div>
+        <div class="checkout-total-row"><span>Shipping</span><span>Calculated at checkout</span></div>
+        <div class="checkout-total-row grand"><span>Total</span><strong id="checkoutTotal">$0</strong></div>
+        <button type="submit" class="checkout-place-btn">Place Order</button>
+        <a href="cart.html" class="cart-continue-btn">← Back to Shopping Bag</a>
+      </aside>
+    </form>
+  </div>
+</main>
+
+<div id="checkoutSuccess" class="checkout-success" hidden>
+  <div class="checkout-success-card">
+    <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+    <span class="section-eyebrow">Order Received</span>
+    <h2>Thank You for Your Order</h2>
+    <p>Your order has been prepared successfully.</p>
+    <p class="order-number">Order Reference: <strong id="orderReference"></strong></p>
+    <a href="index.html" class="nav-cta">Continue Shopping</a>
+  </div>
+</div>
+
+<script src="products-data.js"></script>
+<script src="script.js"></script>
+<script>
+(function(){
+  const form=document.getElementById('checkoutForm');
+  const empty=document.getElementById('checkoutEmpty');
+  const itemsEl=document.getElementById('checkoutItems');
+  const subtotalEl=document.getElementById('checkoutSubtotal');
+  const totalEl=document.getElementById('checkoutTotal');
+  const success=document.getElementById('checkoutSuccess');
+  const refEl=document.getElementById('orderReference');
+  const products=(window.ELEGANCE_PRODUCTS&&window.ELEGANCE_PRODUCTS.products)||[];
+  const moneyNumber=v=>{const n=parseFloat(String(v||'').replace(/[^0-9.\-]/g,''));return Number.isFinite(n)?n:0;};
+  const money=v=>'$'+v.toFixed(2).replace(/\.00$/,'');
+  function load(){
+    const cart=typeof getCart==='function'?getCart():[];
+    if(!cart.length){form.hidden=true;empty.hidden=false;return false;}
+    form.hidden=false;empty.hidden=true;
+    let subtotal=0;
+    itemsEl.innerHTML=cart.map(item=>{
+      const p=products.find(x=>x.id===item.id)||products.find(x=>x.name===item.name)||item;
+      const qty=Math.max(1,parseInt(item.qty,10)||1); const price=moneyNumber(p.salePrice||p.price); subtotal+=price*qty;
+      return '<div class="checkout-order-item"><img src="'+escapeHtml(p.img||item.img||'')+'" alt="'+escapeHtml(p.name||item.name||'Product')+'"><div><strong>'+escapeHtml(p.name||item.name||'Product')+'</strong><small>Qty: '+qty+'</small></div><b>'+money(price*qty)+'</b></div>';
+    }).join('');
+    subtotalEl.textContent=money(subtotal);totalEl.textContent=money(subtotal);return true;
+  }
+  form.addEventListener('submit',async function(e){
+    e.preventDefault();
+    if(!form.checkValidity()){form.reportValidity();return;}
+
+    // Read the cart in this scope. The previous version referenced
+    // `cart` here even though it only existed inside load().
+    const cart=typeof getCart==='function'?getCart():[];
+    if(!cart.length){load();return;}
+
+    const ref='ELG-'+Date.now().toString().slice(-8);
+    const formData=new FormData(form);
+    let subtotal=0;
+    const orderItems=cart.map(item=>{
+      const p=products.find(x=>x.id===item.id)||products.find(x=>x.name===item.name)||item;
+      const qty=Math.max(1,parseInt(item.qty,10)||1);
+      const price=moneyNumber(p.salePrice||p.price);
+      subtotal += price*qty;
+      return {id:p.id||item.id,name:p.name||item.name,price,qty,img:p.img||item.img||''};
+    });
+
+    const order={
+      reference:ref,
+      createdAt:new Date().toISOString(),
+      status:'New',
+      payment:formData.get('payment')||'cod',
+      customer:{
+        firstName:formData.get('firstName')||'',
+        lastName:formData.get('lastName')||'',
+        email:formData.get('email')||'',
+        phone:formData.get('phone')||'',
+        address:formData.get('address')||'',
+        city:formData.get('city')||'',
+        postal:formData.get('postal')||'',
+        country:formData.get('country')||''
+      },
+      items:orderItems,
+      total:subtotal
+    };
+
+    // Save the order on the server so it is available in the admin panel
+    // and send confirmation emails to the customer + admin.
+    try {
+      const response = await fetch('/api/orders', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(order)
+      });
+      const result = await response.json();
+      if(!response.ok) throw new Error(result.error || 'Could not place order.');
+      const savedOrder = result.order || order;
+      const orders=JSON.parse(localStorage.getItem('elegance-orders')||'[]');
+      orders.push(savedOrder);
+      localStorage.setItem('elegance-orders',JSON.stringify(orders));
+      localStorage.setItem('elegance-last-order',JSON.stringify({reference:savedOrder.reference,createdAt:savedOrder.createdAt}));
+      if(typeof saveCart==='function') saveCart([]);
+      if(typeof updateCartBadge==='function') updateCartBadge();
+      window.location.href='order-success.html?order='+encodeURIComponent(savedOrder.reference);
+    } catch(err) {
+      // Keep the customer's data safe locally if the server is temporarily unavailable.
+      const orders=JSON.parse(localStorage.getItem('elegance-orders')||'[]');
+      orders.push(order);
+      localStorage.setItem('elegance-orders',JSON.stringify(orders));
+      localStorage.setItem('elegance-last-order',JSON.stringify({reference:ref,createdAt:order.createdAt}));
+      if(typeof saveCart==='function') saveCart([]);
+      if(typeof updateCartBadge==='function') updateCartBadge();
+      alert('Order saved on this device, but the online order service is unavailable. Please contact the store if you do not receive a confirmation email.');
+      window.location.href='order-success.html?order='+encodeURIComponent(ref);
+    }
+  });
+  load();
+})();
+</script>
+</body>
+</html>
